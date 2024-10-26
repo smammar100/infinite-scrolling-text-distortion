@@ -1,0 +1,19 @@
+.frame {
+  width: 100%;
+  position: fixed;
+  top: 20px;
+  z-index: 9;
+  font-size: 12rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  a {
+    @include underline;
+  }
+  h1 {
+    font-size: inherit;
+    font-weight: normal;
+  }
+}
