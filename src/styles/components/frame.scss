@@ -9,11 +9,58 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  a {
+  
+  & > a, h1 a{
     @include underline;
   }
   h1 {
     font-size: inherit;
     font-weight: normal;
+  }
+  .cdawrap {
+    max-width: 217rem;
+    position: fixed;
+    bottom: 20px;
+    text-align: center;
+    line-height: 0.916;
+    text-transform: none;
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 0px 15px;
+    top: 15px;
+    &::before, &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 160px;
+      background: linear-gradient(0deg, rgba(#7C5327, 0) 0%, rgba(#7C5327, 1) 80%);
+      position: absolute;
+      left: 0;
+      z-index: 0;
+    }
+    &::before {
+      top: -15px;
+    }
+    &::after {
+      top: calc(100dvh - 160px);
+      background: linear-gradient(180deg, rgba(#7C5327, 0) 0%, rgba(#7C5327, 1) 80%);
+    }
+    & > * {
+      z-index: 1;
+    }
+    h1 {
+      width: 100%;
+    }
+    .cdawrap {
+      bottom: 15px;
+    }
   }
 }
