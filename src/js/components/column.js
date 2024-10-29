@@ -100,7 +100,9 @@ export default class Column {
     this.scroll.current = 0;
     this.speed.t = 0;
     this.speed.c = 0;
+    this.paused = true;
     this.updateElements(0);
+    this.$el.classList.add('no-transform');
     
     this.items = Array.from(this.$content.children).map((item, i) => {
       const data = {
@@ -126,6 +128,8 @@ export default class Column {
     this.height = this.$content.scrollHeight;
     this.updateElements(0);
     this.speed.t = this.defaultSpeed;
+    this.$el.classList.remove('no-transform');
+    this.paused = false;
   }
   destroy() {
     this.destroyed = true;

@@ -15,13 +15,16 @@ export default class Images {
     this.direction = '';
 
     this.$content = this.$el.firstElementChild;
+
+    this.resize = this.resize.bind(this);
+    this.render = this.render.bind(this);
+    this.wheel = this.wheel.bind(this);
     this.init();
   }
   init() {
-    window.addEventListener('resize', this.resize.bind(this));
-    window.addEventListener('wheel', this.wheel.bind(this));
+    window.addEventListener('resize', this.resize);
+    window.addEventListener('wheel', this.wheel);
     this.resize();
-    this.render = this.render.bind(this);
     this.render();
   }
   wheel(e) {
@@ -34,22 +37,22 @@ export default class Images {
     this.winH = window.innerHeight;
     if(window.innerWidth <= 1024) {
       this.destroy();
+      return;
     }
-    if(this.winW <= 1024) return;
 
     this.scroll.target = 0;
     this.scroll.current = 0;
     this.speed.t = 0;
     this.speed.c = 0;
+    this.paused = true;
     this.updateElements(0);
+    this.$el.classList.add('no-transform');
     
     this.items = Array.from(this.$content.children).map((item, i) => {
       const data = {
         el: item
       }
-      data.width = data.el.clientWidth;
       data.height = data.el.clientHeight;
-      data.left = data.el.offsetLeft;
       data.top = data.el.offsetTop;
       data.bounds = data.el.getBoundingClientRect();
       data.y = 0;
@@ -60,6 +63,8 @@ export default class Images {
     this.height = this.$content.scrollHeight;
     this.updateElements(0);
     this.speed.t = this.defaultSpeed;
+    this.$el.classList.remove('no-transform');
+    this.paused = false;
   }
   render(t) {
     if(this.destroyed || this.paused) return;
