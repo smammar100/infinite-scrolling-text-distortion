@@ -1,5 +1,3 @@
-
-
 const lineBreak = (text, max, $container) => {
   const getTotalWidth = ($el) =>
     Array.from($el.children).reduce((acc, child) => acc + child.getBoundingClientRect().width, 0);
