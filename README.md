@@ -1,12 +1,12 @@
 # Infinite Scrolling Text Organic Distortion 
 
-Implementation of a infinite scrolling organic distortion effect for the text using CSS and JS by [Jorge Toloza](http://jorgetoloza.co).
+Implementation of an organic distortion effect for the text with infinite scrolling using CSS and JS by [Jorge Toloza](http://jorgetoloza.co).
 
-![Image Title](cover.jpg)
+![Image](https://tympanus.net/codrops/wp-content/uploads/2024/10/Group-105.jpg)
 
-[Tutorial on Codrops](https://tympanus.net/codrops/?p=)
+[Tutorial on Codrops](https://tympanus.net/codrops/?p=81921)
 
-[Demo](http://tympanus.net/Development/.../)
+[Demo](https://tympanus.net/Tutorials/OrganicTextDistortion/)
 
 ## Installation
 
