@@ -6,16 +6,16 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="robots" content="all">
 	<title>Infinite Scrolling Text Distortion | Codrops</title>
-	<meta name="description" content="Implementation of a infinite scrolling organic distortion effect for the text">
-	<link rel="icon" href="/fav/fav.ico" sizes="any">
-	<link rel="icon" href="/fav/fav.svg">
-	<link rel="mask-icon" href="/fav/fav-mask.svg" color="#FFFFFF">
-	<link rel="apple-touch-icon" href="/fav/apple-touch.png">
+	<meta name="description" content="An organic text distortion effect with infinite scrolling">
+	<link rel="icon" href="/fav/favicon.ico" sizes="any">
+	<link rel="mask-icon" href="/fav/fav-mask.svg" color="#334bf7">
+	<link rel="apple-touch-icon" href="/fav/maskable-icon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wdth,wght@75..125,100..900&family=Gupter:wght@400;500;700&display=swap" rel="stylesheet">
+	<script>document.documentElement.className="js";</script>
 </head>
-<body>
+<body class="loading">
 	<div id="grid">
 		<div></div>
 		<div></div>
@@ -30,11 +30,10 @@
 	</div>
 	<main id="main">
 		<header class="frame">
-			<h1>Infinite <a href="https://tympanus.net/codrops/demos/?tag=scroll">#scrolling</a> Organic text <a href="https://tympanus.net/codrops/demos/?tag=distortion">#distortion</a></h1>
-			<a class="frame__back" href="https://tympanus.net/codrops/?p=">Article</a>
+			<h1>Organic text <a href="https://tympanus.net/codrops/demos/?tag=distortion">#distortion</a> with infinite <a href="https://tympanus.net/codrops/demos/?tag=scroll">#scrolling</a> </h1>
+			<a class="frame__back" href="https://tympanus.net/codrops/?p=81921">Article</a>
 			<a class="frame__archive" href="https://tympanus.net/codrops/demos/">All demos</a>
 			<a class="frame__github" href="https://github.com/JorgeCapillo/infinite-scrolling-text-distortion">GitHub</a>
-			<div id="cdawrap" class="cdawrap"><a href="http://www.guidde.com?utm_campaign=codrops&amp;utm_source=newsletter&amp;utm_medium=email&amp;utm_term=1024&amp;utm_content=demo_link" class="cda-sponsor-link" target="_blank" rel="nofollow noopener">Create stunning AI-generated video guides in seconds. Try Guidde's free demo now!</a></div>
 		</header>
 		<section id="hero">
 			<div class="column">
@@ -62,7 +61,7 @@
 						<img src="/img/emma-4.jpg" alt="Emma Stone">
 					</div>
 				</div>
-				<p>Exploring a scroll-based text organic distortion animation using CSS and JavaScript for a <a href="https://tympanus.net/codrops/">Codrops</a> article by <a href="https://jorgetoloza.co" target="_blank" rel="noopener">Jorge Toloza</a>. The animation reacts to user scroll, distorting text in a captivating manner. It uses sin for the left column and cos for the right one, and the movement also depends on the strength of the scroll. Images from <a href="https://imdb.com/title/tt22408160" target="_blank" rel="noopener">IMDB</a></p>
+				<p>Exploring a scroll-based text organic distortion animation using CSS and JavaScript for a <a href="https://tympanus.net/codrops/">Codrops</a> article by <a href="https://jorgetoloza.co" target="_blank" rel="noopener">Jorge Toloza</a>. The animation reacts to user scroll, distorting text in a captivating manner. It uses sin for the left column and cos for the right one, and the movement also depends on the strength of the scroll.</p>
 			</div>
 			<div class="column">
 				<div class="column-content">
@@ -78,6 +77,6 @@
 			</div>
 		</section>
 	</main>
-  <script type="module" src="./js/pages/index.js"></script>
+    <script type="module" src="./js/pages/index.js"></script>
 </body>
 </html>

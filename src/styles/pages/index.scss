@@ -38,6 +38,7 @@
       img {
         width: 100%;
         aspect-ratio: 1 / 1;
+        will-change: transform;
       }
     }
   }
@@ -72,7 +73,7 @@
     p {
       max-width: 508rem;
       letter-spacing: 0;
-      font-size: 10rem;
+      font-size: 14rem;
       line-height: 0.95;
       margin: 0;
       a {

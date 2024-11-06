@@ -42,4 +42,5 @@ export default class Index {
 }
 window.addEventListener('load', () => {
   new Index();
+  document.body.classList.remove('loading');
 });
